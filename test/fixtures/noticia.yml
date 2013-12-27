@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  titulo: MyString
+  noticia: MyString
+  categoria: MyString
+  rating: 1
+  personas: 1
+
+two:
+  titulo: MyString
+  noticia: MyString
+  categoria: MyString
+  rating: 1
+  personas: 1

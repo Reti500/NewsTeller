@@ -11,12 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131227091538) do
+ActiveRecord::Schema.define(version: 20131227092627) do
 
   create_table "asig_noticia", force: true do |t|
     t.integer  "user_id"
     t.integer  "noticia_id"
     t.string   "estado"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "asig_tags", force: true do |t|
+    t.integer  "noticia_id"
+    t.integer  "tag_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -33,6 +40,13 @@ ActiveRecord::Schema.define(version: 20131227091538) do
     t.string   "imagen_content_type"
     t.integer  "imagen_file_size"
     t.datetime "imagen_updated_at"
+  end
+
+  create_table "tags", force: true do |t|
+    t.string   "nombre"
+    t.integer  "contador"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
